@@ -6,12 +6,14 @@
 class Rand : public Base {
     public:
 	Rand() : Base() {   }
-	virtual double evaluate() { return 0.0;  }
-	virtual std::string stringify() { return "";}
+	virtual double evaluate() { 
+	    val = rand() % 100;
+	    return val; 
+	}
+	virtual std::string stringify() { return std::to_string(val);}
+
     private:
 	double val;
-	string valString;
-
 };
 
 #endif //__RAND_HPP__
