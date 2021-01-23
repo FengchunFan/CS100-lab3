@@ -5,9 +5,17 @@
 
 class Mult : public Base {
     public:
-	Mult(Base* lhs, Base* rhs) : Base() { }
-	virtual double evaluate() { return 0.0; }
-	virtual std::string stringify() ( return ""; }
+	Mult(Base* lhs, Base* rhs) : Base() { 
+	    leftVal = lhs;
+	    rightVal = rhs;
+	}
+	virtual double evaluate() {
+	    return (leftVal->evaluate()) * (rightVal->evaluate()); 
+	}
+	virtual std::string stringify() {
+	    return ("(" + leftVal->stringify() + "*" + rightVal->stringify() + ")"); 
+	}
+
     private:
 	Base* leftVal = nullptr;
 	Base* rightVal = nullptr;
