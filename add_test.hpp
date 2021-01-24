@@ -4,6 +4,7 @@
 #include "gtest/gtest.h"
 
 #include "add.hpp"
+#include "op.hpp"
 
 TEST(AddTest, AdditionBetweenZeros) {
 	 Base* val = new Op(0);
