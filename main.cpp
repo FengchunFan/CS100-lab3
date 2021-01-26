@@ -1,6 +1,9 @@
 #include <iostream>
 
 #include "base.hpp"
+#include "pow.hpp"
+#include "sub.hpp"
+#include "add.hpp"
 
 int main() {
     // This is a very basic main, and being able to correctly execute this main
