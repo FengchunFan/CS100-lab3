@@ -5,13 +5,14 @@
 
 #include "add.hpp"
 #include "op.hpp"
+#include "base.hpp"
 
 TEST(AddTest, AdditionBetweenZeros) {
 	 Base* val = new Op(0);
 
 	 Base* output = new ADD(val, val);
-	 EXPECT_EQ(add->evaluate(), 0);
-     	 EXPECT_EQ(add->stringify(), "(0.000000 + 0.000000)");
+	 EXPECT_EQ(output->evaluate(), 0);
+     	 EXPECT_EQ(output-> stringify(), "(0.000000 + 0.000000)");
 }
 
 TEST(AddTest, AdditionBetweenPositive) {
@@ -19,8 +20,8 @@ TEST(AddTest, AdditionBetweenPositive) {
 	Base* val2 = new Op(5);
 	Base* output = new ADD(val1, val2);
     
-	EXPECT_EQ(add->evaluate(), 9);
-    	EXPECT_EQ(add->stringify(), "(4.000000 + 5.000000)");
+	EXPECT_EQ(output->evaluate(), 9);
+    	EXPECT_EQ(output->stringify(), "(4.000000 + 5.000000)");
 }
 
 TEST(AddTest, AdditionBetweenNegative) {
@@ -28,8 +29,8 @@ TEST(AddTest, AdditionBetweenNegative) {
         Base* val2 = new Op(-2);
         Base* output = new ADD(val1, val2);
 
-        EXPECT_EQ(add->evaluate(), -3);
-        EXPECT_EQ(add->stringify(), "(-1.000000 + -2.000000)");
+        EXPECT_EQ(output->evaluate(), -3);
+        EXPECT_EQ(output->stringify(), "(-1.000000 + -2.000000)");
 }
 
 TEST(AddTest, AdditionBetweenLarge) {
@@ -46,8 +47,8 @@ TEST(AddTest, AdditionBetweenSmall) {
         Base* val2 = new Op(0.000002);
         Base* output = new ADD(val1, val2);
 
-        EXPECT_EQ(add->evaluate(), 0.000003);
-        EXPECT_EQ(add->stringify(), "(0.000001 + 0.000002)");
+        EXPECT_EQ(output->evaluate(), 0.000003);
+        EXPECT_EQ(output->stringify(), "(0.000001 + 0.000002)");
 }
 
 #endif
