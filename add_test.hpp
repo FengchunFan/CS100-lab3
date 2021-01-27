@@ -38,8 +38,8 @@ TEST(AddTest, AdditionBetweenLarge) {
         Base* val2 = new Op(2000);
         Base* output = new ADD(val1, val2);
 
-        EXPECT_EQ(add->evaluate(), 3000);
-        EXPECT_EQ(add->stringify(), "(1000.000000 + 2000.000000)");
+        EXPECT_EQ(output->evaluate(), 3000);
+        EXPECT_EQ(output->stringify(), "(1000.000000 + 2000.000000)");
 }
 
 TEST(AddTest, AdditionBetweenSmall) {
