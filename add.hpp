@@ -18,7 +18,7 @@ class ADD : public Base{
 		}
 
 		virtual std::string stringify(){
-			return ("(" + val1->stringify() + "+" + val2->stringify() + ")")	
+			return ("(" + val1->stringify() + "+" + val2->stringify() + ")");	
 		}
-}
+};
 #endif
