@@ -12,7 +12,7 @@ TEST(SubTest, SubtractionBetweenZeros) {
 
 	 Base* output = new SUB(val, val);
 	 EXPECT_EQ(output->evaluate(), 0);
-     	 EXPECT_EQ(output->stringify(), "(0.000000 - 0.000000)");
+     	 EXPECT_EQ(output->stringify(), "(0.000000-0.000000)");
 }
 
 TEST(SubTest, SubtractionBetweenPositive) {
@@ -21,7 +21,7 @@ TEST(SubTest, SubtractionBetweenPositive) {
 	Base* output = new SUB(val1, val2);
     
 	EXPECT_EQ(output->evaluate(), 1);
-    	EXPECT_EQ(output->stringify(), "(5.000000 - 4.000000)");
+    	EXPECT_EQ(output->stringify(), "(5.000000-4.000000)");
 }
 
 TEST(SubTest, SubtractionBetweenNegative) {
@@ -30,7 +30,7 @@ TEST(SubTest, SubtractionBetweenNegative) {
         Base* output = new SUB(val1, val2);
 
         EXPECT_EQ(output->evaluate(), 1);
-        EXPECT_EQ(output->stringify(), "(-1.000000 - -2.000000)");
+        EXPECT_EQ(output->stringify(), "(-1.000000--2.000000)");
 }
 
 TEST(SubTest, SubtractionBetweenLarge) {
@@ -39,7 +39,7 @@ TEST(SubTest, SubtractionBetweenLarge) {
         Base* output = new SUB(val1, val2);
 
         EXPECT_EQ(output->evaluate(), 1000);
-        EXPECT_EQ(output->stringify(), "(2000.000000 - 1000.000000)");
+        EXPECT_EQ(output->stringify(), "(2000.000000-1000.000000)");
 }
 
 TEST(SubTest, SubtractionBetweenSmall) {
@@ -48,7 +48,7 @@ TEST(SubTest, SubtractionBetweenSmall) {
         Base* output = new SUB(val1, val2);
 
         EXPECT_EQ(output->evaluate(), 0.000001);
-        EXPECT_EQ(output->stringify(), "(0.000002 - 0.000001)");
+        EXPECT_EQ(output->stringify(), "(0.000002-0.000001)");
 }
 
 #endif
