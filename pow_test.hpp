@@ -12,7 +12,7 @@ TEST(PowTest, PowerZero) {
 	 Base* val2 = new Op(0);
 	 Base* output = new POW(val1, val2);
 	 EXPECT_EQ(output->evaluate(), 1);
-     	 EXPECT_EQ(output->stringify(), "(5.000000 ** 0.000000)");
+     	 EXPECT_EQ(output->stringify(), "(5.000000**0.000000)");
 }
 
 TEST(PowTest, PositivePower) {
@@ -21,7 +21,7 @@ TEST(PowTest, PositivePower) {
 	Base* output = new POW(val1, val2);
     
 	EXPECT_EQ(output->evaluate(), 16);
-    	EXPECT_EQ(output->stringify(), "(4.000000 ** 2.000000)");
+    	EXPECT_EQ(output->stringify(), "(4.000000**2.000000)");
 }
 
 TEST(PowTest, NegativePower) {
@@ -30,7 +30,7 @@ TEST(PowTest, NegativePower) {
         Base* output = new POW(val1, val2);
 
         EXPECT_EQ(output->evaluate(), 1);
-        EXPECT_EQ(output->stringify(), "(1.000000 ** -2.000000)");
+        EXPECT_EQ(output->stringify(), "(1.000000**-2.000000)");
 }
 
 TEST(PowTest, LargePower) {
@@ -39,7 +39,7 @@ TEST(PowTest, LargePower) {
         Base* output = new POW(val1, val2);
 
         EXPECT_EQ(output->evaluate(), 1);
-        EXPECT_EQ(output->stringify(), "(1.000000 ** 1000.000000)");
+        EXPECT_EQ(output->stringify(), "(1.000000**1000.000000)");
 }
 
 
