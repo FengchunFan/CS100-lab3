@@ -3,7 +3,7 @@
 
 #include "base.hpp"
 
-Class SUB : public Base{
+class SUB : public Base{
 	private:
 		Base* val1 = nullptr;
 		Base* val2 = nullptr;
@@ -14,12 +14,12 @@ Class SUB : public Base{
 		}
 		
 		virtual double evaluate(){
-			return(val1 - val2);
+			return((val1->evaluate()) - (val2->evaluate()));
 		}
 
 		virtual std::string stringify() {
 	   		 return ("(" + val1->stringify() + "-" + val2->stringify() + ")"); 
 		}
-}
+};
 
 #endif
